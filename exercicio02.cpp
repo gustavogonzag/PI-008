@@ -18,5 +18,23 @@ int main() {
         count[array[i] - 1]++;
     }
     
+    int maxCount = 0;
+    
+    for(int i = 0; i < 20; i++) {
+        if(count[i] > maxCount) {
+            maxCount = count[i];
+        }
+    }
+    
+    std::cout << "O(s) número(s) que mais vezes aparecem no array: ";
+    
+    for(int i = 0; i < 20; i++) {
+        if(count[i] == maxCount) {
+            std::cout << i + 1 << " ";
+        }
+    }
+    
+    std::cout << std::endl;
+    
     return 0;
 }
